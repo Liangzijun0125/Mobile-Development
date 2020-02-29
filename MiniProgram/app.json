@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#7D9EC0",
+      "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "图书详情页",
+      "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark",
+      "enablePullDownRefresh": false
+  },
+  "sitemapLocation": "sitemap.json"
+}
