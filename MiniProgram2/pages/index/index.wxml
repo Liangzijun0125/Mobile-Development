@@ -1,0 +1,20 @@
+<!--pages/index/index.wxml-->
+<view class='imagesize'>
+<image src="/images/leiyu.jpg" class='in-image'>
+</image>
+</view>
+<view class="name">《雷雨》</view>
+<view class="author">作者： 曹禺</view>
+<view class="publication">出版社：北京十月文艺出版社</view>
+<view class="year">出版年：2017-12</view>
+<view class="brief">简介：</view>
+<view class="intro">  此剧以1925年前后的中国社会为背景，描写了一个带有浓厚封建色彩的资产阶级家庭的悲剧。剧中以两个家庭、八个人物、三十年的恩怨为主线，伪善的资本家大家长周朴园，受新思想影响的单纯的少年周冲，被冷漠的家庭逼疯了和被爱情伤得体无完肤的女人蘩漪，对过去所作所为充满了罪恶感、企图逃离的周萍，还有意外归来的鲁妈，单纯着爱与被爱的四凤，受压迫的工人鲁大海，贪得无厌的管家等，不论是家庭秘密还是身世秘密，所有的矛盾都在雷雨之夜爆发，在叙述家庭矛盾纠葛、怒斥封建家庭腐朽顽固的同时，反映了更为深层的社会及时代问题。</view>
+<view class="chapter">章节信息：</view>
+ <view> 
+<text class="scene"wx:for='{{chapterList}}'wx-key='info{{index}}' >{{item.text}}</text>
+<!-- <text class="scene">第一幕</text> -->
+<!-- <text class="scene">第二幕</text> -->
+<!-- <text class="scene">第三幕</text> -->
+<!-- <text class="scene">第四幕</text> -->
+<text class="scene" wx:if='{{boolean==true}}'>{{name}}</text>
+</view>
