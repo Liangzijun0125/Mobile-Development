@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section">
+      <view class="page-section-title">
+        <text>View：flex-direction: row\n横向布局</text>
+      </view>
+      <view class="page-section-spacing">
+        <view class="flex-wrp" style="flex-direction:row;">
+          <view class="flex-item demo-text-1"style="background:#019858">A</view>
+          <view class="flex-item demo-text-2" style="background:#0066CC">B</view>
+          <view class="flex-item demo-text-3"style="background:#ADADAD">C</view>
+        </view>
+      </view>
+      <view class="page-section-title">
+        <text>Vertical Scroll\n纵向滚动</text>
+      </view>
+      <view class="page-section-spacing">
+        <scroll-view scroll-y="true" style="height: 300rpx;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+          <view id="demo1" class="scroll-view-item demo-text-1" style="background:#019858"></view>
+          <view id="demo2"  class="scroll-view-item demo-text-2" style="background:#0066CC"></view>
+          <view id="demo3" class="scroll-view-item demo-text-3" style="background:#ADADAD"></view>
+        </scroll-view>
+      </view>
+       <view class="page-section page-section-spacing swiper">
+       <text>Swiper和swiper-item</text>
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <view wx:for="{{swiperImg}}" wx:key="swiper{{index}}">
+          <swiper-item>
+            <image src="{{item.src}}"></image>
+          </swiper-item>
+        </view>
+      </swiper>
+    </view>
+    </view>
+    </view>
+   
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view><text>Cover-view和cover-image</text></view>
+   <cover-view>
+    <cover-image src="https://cn.bing.com/th?id=OIP.V8N3A8iLgRsEGt8U3xO1jwHaFG&pid=Api&rs=1">
+    </cover-image></cover-view>
+  <view class="section">
+  <view class="section__title">movable-view区域小于movable-area</view>
+  <movable-area style="height: 100px; width: 100px; background: green;">
+    <movable-view style="height: 50px; width: 50px; background: blue;" x="{{x}}" y="{{y}}" direction="all">
+    </movable-view>
+  </movable-area>
+  <view class="btn-area">
+    <button size="mini" bindtap="tap">click me to move to (30px, 30px)</button>
+  </view>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
